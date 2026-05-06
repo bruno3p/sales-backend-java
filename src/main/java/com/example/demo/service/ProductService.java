@@ -40,4 +40,8 @@ public class ProductService {
 		return productRepository.findByNameContaining(name);
 	}
 
+	public List<Product> findProductsByCategory(String categoryName) {
+		return productRepository.findByCategoryName(categoryName);
+	}
+
 }
