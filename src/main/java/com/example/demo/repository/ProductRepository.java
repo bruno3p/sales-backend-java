@@ -23,4 +23,8 @@ public interface ProductRepository {
 
 	@Delete("DELETE FROM product WHERE id = #{id}")
 	void delete(Long id);
+
+	@Select("SELECT * FROM product WHERE name LIKE CONCAT('%', #{name}, '%')")
+	List<Product> findByNameContaining(String name);
+
 }

@@ -36,4 +36,10 @@ public class ProductController {
 		productService.deleteProduct(id);
 		return "Produto removido com sucesso!";
 	}
+
+	@GetMapping("/search")
+	public List<Product> search(@RequestParam String name) {
+		return productService.searchProducts(name);
+	}
+
 }

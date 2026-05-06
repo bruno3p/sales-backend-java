@@ -35,4 +35,9 @@ public class ProductService {
 	public void deleteProduct(Long id) {
 		productRepository.delete(id);
 	}
+
+	public List<Product> searchProducts(String name) {
+		return productRepository.findByNameContaining(name);
+	}
+
 }
