@@ -27,4 +27,9 @@ public interface ProductRepository {
 	@Select("SELECT * FROM product WHERE name LIKE CONCAT('%', #{name}, '%')")
 	List<Product> findByNameContaining(String name);
 
+	@Select("SELECT p.* FROM product p " +
+			"JOIN category c ON p.category_id = c.id " +
+			"WHERE c.name = #{categoryName}")
+	List<Product> findByCategoryName(String categoryName);
+
 }

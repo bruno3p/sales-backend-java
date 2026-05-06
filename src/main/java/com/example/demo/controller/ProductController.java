@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+import jakarta.validation.Valid;
+
 @RestController
 @RequestMapping("/api/products")
 public class ProductController {
@@ -20,7 +22,7 @@ public class ProductController {
 	}
 
 	@PostMapping
-	public String create(@RequestBody Product product) {
+	public String create(@Valid @RequestBody Product product) {
 		productService.saveProduct(product);
 		return "Produto salvo com sucesso!";
 	}
@@ -40,6 +42,11 @@ public class ProductController {
 	@GetMapping("/search")
 	public List<Product> search(@RequestParam String name) {
 		return productService.searchProducts(name);
+	}
+
+	@GetMapping("/category")
+	public List<Product> findByCategory(@RequestParam String categoryName) {
+		return productService.findProductsByCategory(categoryName);
 	}
 
 }
