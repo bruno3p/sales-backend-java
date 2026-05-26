@@ -32,4 +32,10 @@ public interface MedicalReportRepository {
 			"WHERE c.name = #{categoryName}")
 	List<MedicalReport> findByCategoryName(String categoryName);
 
+	@Select("SELECT * FROM medical_report WHERE doctor_id = #{doctorId}")
+	List<MedicalReport> findByDoctorId(Long doctorId);
+
+	@Select("SELECT * FROM medical_report WHERE patient_id = #{patientId}")
+	List<MedicalReport> findByPatientId(Long patientId);
+
 }

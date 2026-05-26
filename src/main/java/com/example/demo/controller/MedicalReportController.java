@@ -58,4 +58,14 @@ public class MedicalReportController {
 	public List<MedicalReport> getByCategory(@PathVariable String categoryName) {
 		return reportService.findByCategoryName(categoryName);
 	}
+
+	@GetMapping("/doctor/{doctorId}")
+	public List<MedicalReport> getByDoctorId(@PathVariable Long doctorId) {
+		return reportService.findByDoctorId(doctorId);
+	}
+
+	@GetMapping("/patient/{patientId}")
+	public List<MedicalReport> getByPatientId(@PathVariable Long patientId) {
+		return reportService.findByPatientId(patientId);
+	}
 }
