@@ -3,7 +3,7 @@ package com.example.demo.model;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
-public class User {
+public class Doctor {
 	private Long id;
 
 	@NotBlank(message = "O nome é obrigatório")
@@ -16,9 +16,9 @@ public class User {
 	@NotBlank(message = "A senha é obrigatória")
 	private String password;
 
-	public User() {}
+	public Doctor() {}
 
-	public User(Long id, String name, String email, String password) {
+	public Doctor(Long id, String name, String email, String password) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
