@@ -16,13 +16,17 @@ public class Doctor {
 	@NotBlank(message = "A senha é obrigatória")
 	private String password;
 
+	@NotBlank(message = "A especialidade é obrigatória")
+	private String specialty;
+
 	public Doctor() {}
 
-	public Doctor(Long id, String name, String email, String password) {
+	public Doctor(Long id, String name, String email, String password, String specialty) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
+		this.specialty = specialty;
 	}
 
 	public Long getId() { return id; }
@@ -33,4 +37,6 @@ public class Doctor {
 	public void setEmail(String email) { this.email = email; }
 	public String getPassword() { return password; }
 	public void setPassword(String password) { this.password = password; }
+	public String getSpecialty() { return specialty; }
+	public void setSpecialty(String specialty) { this.specialty = specialty; }
 }
