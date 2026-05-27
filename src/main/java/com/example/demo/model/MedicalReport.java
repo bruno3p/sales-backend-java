@@ -17,9 +17,6 @@ public class MedicalReport {
 	@NotBlank(message = "Os detalhes do laudo são obrigatórios")
 	private String details;
 
-	@NotNull(message = "A categoria do laudo é obrigatória")
-	private Long categoryId;
-
 	@NotNull(message = "O ID do paciente é obrigatório")
 	private Long patientId;
 

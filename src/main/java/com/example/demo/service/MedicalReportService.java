@@ -36,10 +36,6 @@ public class MedicalReportService {
 		return reportRepository.findByNameContaining(name);
 	}
 
-	public List<MedicalReport> findByCategoryName(String categoryName) {
-		return reportRepository.findByCategoryName(categoryName);
-	}
-
 	public List<MedicalReport> findByDoctorId(Long doctorId) {
 		return reportRepository.findByDoctorId(doctorId);
 	}
