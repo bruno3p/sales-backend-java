@@ -19,6 +19,10 @@ public class PatientService {
 		return patientRepository.findAll();
 	}
 
+	public Patient findById(Long id) {
+		return patientRepository.findById(id);
+	}
+
 	public void createPatient(Patient patient) {
 		Patient existing = patientRepository.findByEmail(patient.getEmail());
 		if (existing != null) {

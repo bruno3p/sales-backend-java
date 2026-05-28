@@ -19,6 +19,10 @@ public class DoctorService {
 		return doctorRepository.findAll();
 	}
 
+	public Doctor findById(Long id) {
+		return doctorRepository.findById(id);
+	}
+
 	public void createDoctor(Doctor doctor) {
 		Doctor existing = doctorRepository.findByEmail(doctor.getEmail());
 		if (existing != null) {

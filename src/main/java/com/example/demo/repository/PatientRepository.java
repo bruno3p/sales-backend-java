@@ -12,6 +12,9 @@ public interface PatientRepository {
 	@Select("SELECT * FROM patient WHERE email = #{email}")
 	Patient findByEmail(String email);
 
+	@Select("SELECT * FROM patient WHERE id = #{id}")
+	Patient findById(Long id);
+
 	@Insert("INSERT INTO patient (name, email, password) VALUES (#{name}, #{email}, #{password})")
 	@Options(useGeneratedKeys = true, keyProperty = "id")
 	void save(Patient patient);
