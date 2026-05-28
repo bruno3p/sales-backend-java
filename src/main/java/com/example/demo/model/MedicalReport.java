@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import jakarta.validation.constraints.*;
+import java.time.LocalDate;
 
 @Data
 @AllArgsConstructor
@@ -20,6 +21,13 @@ public class MedicalReport {
 	@NotNull(message = "O ID do paciente é obrigatório")
 	private Long patientId;
 
-	@NotNull(message = "O ID do médico é obrigatório")
-	private Long doctorId;
+	private Long doctorId; // Null quando enviado pelo paciente
+
+	private LocalDate date;
+	
+	private Boolean isAiSummarized;
+	
+	private String aiPointsOfAttention;
+	
+	private String originalFileName;
 }
