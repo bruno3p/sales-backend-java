@@ -19,14 +19,17 @@ public class Doctor {
 	@NotBlank(message = "A especialidade é obrigatória")
 	private String specialty;
 
+	private String avatar;
+
 	public Doctor() {}
 
-	public Doctor(Long id, String name, String email, String password, String specialty) {
+	public Doctor(Long id, String name, String email, String password, String specialty, String avatar) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
 		this.specialty = specialty;
+		this.avatar = avatar;
 	}
 
 	public Long getId() { return id; }
@@ -39,4 +42,6 @@ public class Doctor {
 	public void setPassword(String password) { this.password = password; }
 	public String getSpecialty() { return specialty; }
 	public void setSpecialty(String specialty) { this.specialty = specialty; }
+	public String getAvatar() { return avatar; }
+	public void setAvatar(String avatar) { this.avatar = avatar; }
 }

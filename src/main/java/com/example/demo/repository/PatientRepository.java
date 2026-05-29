@@ -15,11 +15,11 @@ public interface PatientRepository {
 	@Select("SELECT * FROM patient WHERE id = #{id}")
 	Patient findById(Long id);
 
-	@Insert("INSERT INTO patient (name, email, password) VALUES (#{name}, #{email}, #{password})")
+	@Insert("INSERT INTO patient (name, email, password, avatar) VALUES (#{name}, #{email}, #{password}, #{avatar})")
 	@Options(useGeneratedKeys = true, keyProperty = "id")
 	void save(Patient patient);
 
-	@Update("UPDATE patient SET name=#{name}, email=#{email}, password=#{password} WHERE id=#{id}")
+	@Update("UPDATE patient SET name=#{name}, email=#{email}, password=#{password}, avatar=#{avatar} WHERE id=#{id}")
 	void update(Patient patient);
 
 	@Delete("DELETE FROM patient WHERE id=#{id}")

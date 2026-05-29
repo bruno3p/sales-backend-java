@@ -1,12 +1,12 @@
-INSERT INTO patient (id, name, email, password) VALUES (101, 'João Silva', 'joao@email.com', '123456');
-INSERT INTO patient (id, name, email, password) VALUES (102, 'Maria Oliveira', 'maria@email.com', '123456');
-INSERT INTO patient (id, name, email, password) VALUES (103, 'Lucas Santos', 'lucas@email.com', '123456');
+INSERT INTO patient (id, name, email, password, avatar) VALUES (101, 'João Silva', 'joao@email.com', '123456', 'https://i.pravatar.cc/150?img=11');
+INSERT INTO patient (id, name, email, password, avatar) VALUES (102, 'Maria Oliveira', 'maria@email.com', '123456', 'https://i.pravatar.cc/150?img=12');
+INSERT INTO patient (id, name, email, password, avatar) VALUES (103, 'Lucas Santos', 'lucas@email.com', '123456', 'https://i.pravatar.cc/150?img=13');
 
-INSERT INTO doctor (id, name, email, password, specialty) VALUES (1, 'Dr. Roberto Almeida', 'roberto@clinic.com', '123456', 'Cardiologia');
-INSERT INTO doctor (id, name, email, password, specialty) VALUES (2, 'Dra. Fernanda Costa', 'fernanda@clinic.com', '123456', 'Dermatologia');
-INSERT INTO doctor (id, name, email, password, specialty) VALUES (3, 'Dr. Carlos Mendes', 'carlos@clinic.com', '123456', 'Ortopedia');
-INSERT INTO doctor (id, name, email, password, specialty) VALUES (4, 'Dra. Juliana Silva', 'juliana@clinic.com', '123456', 'Pediatria');
-INSERT INTO doctor (id, name, email, password, specialty) VALUES (5, 'Dr. Marcos Paulo', 'marcos@clinic.com', '123456', 'Neurologia');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (1, 'Dr. Roberto Almeida', 'roberto@clinic.com', '123456', 'Cardiologia', 'https://i.pravatar.cc/150?img=53');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (2, 'Dra. Fernanda Costa', 'fernanda@clinic.com', '123456', 'Dermatologia', 'https://i.pravatar.cc/150?img=44');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (3, 'Dr. Carlos Mendes', 'carlos@clinic.com', '123456', 'Ortopedia', 'https://i.pravatar.cc/150?img=33');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (4, 'Dra. Juliana Silva', 'juliana@clinic.com', '123456', 'Pediatria', 'https://i.pravatar.cc/150?img=47');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (5, 'Dr. Marcos Paulo', 'marcos@clinic.com', '123456', 'Neurologia', 'https://i.pravatar.cc/150?img=59');
 
 INSERT INTO medical_report (id, name, details, patient_id, doctor_id, report_date) VALUES (1001, 'Eletrocardiograma', 'Ritmo sinusal normal. Sem alterações isquêmicas agudas.', 101, 1, '2023-10-15');
 INSERT INTO medical_report (id, name, details, patient_id, doctor_id, report_date) VALUES (1002, 'Exame Dermatológico', 'Presença de nevo atípico no dorso. Recomendada biópsia.', 102, 2, '2023-11-02');
