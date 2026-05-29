@@ -15,8 +15,10 @@ public class Appointment {
     private Long id;
 
     @NotNull(message = "O ID do médico é obrigatório")
+    @com.fasterxml.jackson.annotation.JsonProperty("doctor_id")
     private Long doctorId;
 
+    @com.fasterxml.jackson.annotation.JsonProperty("patient_id")
     private Long patientId; // null se estiver disponível
 
     @NotNull(message = "A data do agendamento é obrigatória")

@@ -16,13 +16,16 @@ public class Patient {
 	@NotBlank(message = "A senha é obrigatória")
 	private String password;
 
+	private String avatar;
+
 	public Patient() {}
 
-	public Patient(Long id, String name, String email, String password) {
+	public Patient(Long id, String name, String email, String password, String avatar) {
 		this.id = id;
 		this.name = name;
 		this.email = email;
 		this.password = password;
+		this.avatar = avatar;
 	}
 
 	public Long getId() { return id; }
@@ -33,4 +36,6 @@ public class Patient {
 	public void setEmail(String email) { this.email = email; }
 	public String getPassword() { return password; }
 	public void setPassword(String password) { this.password = password; }
+	public String getAvatar() { return avatar; }
+	public void setAvatar(String avatar) { this.avatar = avatar; }
 }

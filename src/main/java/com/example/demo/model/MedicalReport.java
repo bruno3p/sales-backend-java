@@ -19,8 +19,10 @@ public class MedicalReport {
 	private String details;
 
 	@NotNull(message = "O ID do paciente é obrigatório")
+	@com.fasterxml.jackson.annotation.JsonProperty("patient_id")
 	private Long patientId;
 
+	@com.fasterxml.jackson.annotation.JsonProperty("doctor_id")
 	private Long doctorId; // Null quando enviado pelo paciente
 
 	private LocalDate date;

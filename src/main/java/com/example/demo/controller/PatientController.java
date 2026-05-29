@@ -19,6 +19,15 @@ public class PatientController {
 		return patientService.findAll();
 	}
 
+	@GetMapping("/{id}")
+	public ResponseEntity<Patient> getById(@PathVariable Long id) {
+		Patient patient = patientService.findById(id);
+		if (patient != null) {
+			return ResponseEntity.ok(patient);
+		}
+		return ResponseEntity.notFound().build();
+	}
+
 	@PostMapping
 	public ResponseEntity<String> create(@Valid @RequestBody Patient patient) {
 		patientService.createPatient(patient);

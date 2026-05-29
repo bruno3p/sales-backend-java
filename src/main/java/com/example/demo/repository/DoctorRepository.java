@@ -12,11 +12,14 @@ public interface DoctorRepository {
 	@Select("SELECT * FROM doctor WHERE email = #{email}")
 	Doctor findByEmail(String email);
 
-	@Insert("INSERT INTO doctor (name, email, password, specialty) VALUES (#{name}, #{email}, #{password}, #{specialty})")
+	@Select("SELECT * FROM doctor WHERE id = #{id}")
+	Doctor findById(Long id);
+
+	@Insert("INSERT INTO doctor (name, email, password, specialty, avatar) VALUES (#{name}, #{email}, #{password}, #{specialty}, #{avatar})")
 	@Options(useGeneratedKeys = true, keyProperty = "id")
 	void save(Doctor doctor);
 
-	@Update("UPDATE doctor SET name=#{name}, email=#{email}, password=#{password}, specialty=#{specialty} WHERE id=#{id}")
+	@Update("UPDATE doctor SET name=#{name}, email=#{email}, password=#{password}, specialty=#{specialty}, avatar=#{avatar} WHERE id=#{id}")
 	void update(Doctor doctor);
 
 	@Delete("DELETE FROM doctor WHERE id=#{id}")
