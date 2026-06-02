@@ -22,9 +22,9 @@ public class MedicalReportController {
 	}
 
 	@PostMapping
-	public ResponseEntity<String> create(@Valid @RequestBody MedicalReport report) {
+	public ResponseEntity<MedicalReport> create(@Valid @RequestBody MedicalReport report) {
 		reportService.createReport(report);
-		return ResponseEntity.ok("Laudo médico criado com sucesso!");
+		return ResponseEntity.ok(report);
 	}
 
 	@GetMapping("/{id}")
@@ -37,10 +37,10 @@ public class MedicalReportController {
 	}
 
 	@PutMapping("/{id}")
-	public ResponseEntity<String> update(@PathVariable Long id, @Valid @RequestBody MedicalReport report) {
+	public ResponseEntity<MedicalReport> update(@PathVariable Long id, @Valid @RequestBody MedicalReport report) {
 		report.setId(id);
 		reportService.updateReport(report);
-		return ResponseEntity.ok("Laudo médico atualizado com sucesso!");
+		return ResponseEntity.ok(report);
 	}
 
 	@DeleteMapping("/{id}")
@@ -62,5 +62,41 @@ public class MedicalReportController {
 	@GetMapping("/patient/{patientId}")
 	public List<MedicalReport> getByPatientId(@PathVariable Long patientId) {
 		return reportService.findByPatientId(patientId);
+	}
+
+	@PostMapping("/{id}/upload")
+	public ResponseEntity<?> uploadFile(@PathVariable Long id, @RequestParam("file") org.springframework.web.multipart.MultipartFile file) {
+		try {
+			reportService.processUploadedReport(id, file);
+			MedicalReport updatedReport = reportService.findById(id);
+			return ResponseEntity.ok(updatedReport);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return ResponseEntity.status(org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR)
+					.body(java.util.Collections.singletonMap("error", "Erro ao processar arquivo: " + e.getMessage()));
+		}
+	}
+
+	@GetMapping("/{id}/download")
+	public ResponseEntity<org.springframework.core.io.Resource> downloadFile(@PathVariable Long id) {
+		MedicalReport report = reportService.findById(id);
+		if (report == null || report.getOriginalFileName() == null) {
+			return ResponseEntity.notFound().build();
+		}
+
+		try {
+			java.nio.file.Path file = java.nio.file.Paths.get("uploads/").resolve(report.getOriginalFileName());
+			org.springframework.core.io.Resource resource = new org.springframework.core.io.UrlResource(file.toUri());
+
+			if (resource.exists() || resource.isReadable()) {
+				return ResponseEntity.ok()
+						.header(org.springframework.http.HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=\"" + report.getOriginalFileName() + "\"")
+						.body(resource);
+			} else {
+				return ResponseEntity.notFound().build();
+			}
+		} catch (Exception e) {
+			return ResponseEntity.internalServerError().build();
+		}
 	}
 }
