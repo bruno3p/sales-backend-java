@@ -14,6 +14,7 @@ public class Doctor {
 	private String email;
 
 	@NotBlank(message = "A senha é obrigatória")
+	@jakarta.validation.constraints.Pattern(regexp = "^(?=.*[A-Z])(?=.*[@#$%^&+=!]).{8,}$", message = "A senha deve ter no mínimo 8 caracteres, contendo pelo menos 1 letra maiúscula e 1 caractere especial")
 	private String password;
 
 	@NotBlank(message = "A especialidade é obrigatória")

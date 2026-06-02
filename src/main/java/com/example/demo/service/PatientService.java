@@ -23,11 +23,15 @@ public class PatientService {
 		return patientRepository.findById(id);
 	}
 
+	@Autowired
+	private org.springframework.security.crypto.password.PasswordEncoder passwordEncoder;
+
 	public void createPatient(Patient patient) {
 		Patient existing = patientRepository.findByEmail(patient.getEmail());
 		if (existing != null) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "E-mail já cadastrado");
 		}
+		patient.setPassword(passwordEncoder.encode(patient.getPassword()));
 		patientRepository.save(patient);
 	}
 

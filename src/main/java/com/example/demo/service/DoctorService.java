@@ -23,11 +23,15 @@ public class DoctorService {
 		return doctorRepository.findById(id);
 	}
 
+	@Autowired
+	private org.springframework.security.crypto.password.PasswordEncoder passwordEncoder;
+
 	public void createDoctor(Doctor doctor) {
 		Doctor existing = doctorRepository.findByEmail(doctor.getEmail());
 		if (existing != null) {
 			throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "E-mail já cadastrado");
 		}
+		doctor.setPassword(passwordEncoder.encode(doctor.getPassword()));
 		doctorRepository.save(doctor);
 	}
 
