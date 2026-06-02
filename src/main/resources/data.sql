@@ -1,12 +1,27 @@
-INSERT INTO patient (id, name, email, password, avatar) VALUES (101, 'João Silva', 'joao@email.com', '123456', 'https://i.pravatar.cc/150?img=11');
-INSERT INTO patient (id, name, email, password, avatar) VALUES (102, 'Maria Oliveira', 'maria@email.com', '123456', 'https://i.pravatar.cc/150?img=12');
-INSERT INTO patient (id, name, email, password, avatar) VALUES (103, 'Lucas Santos', 'lucas@email.com', '123456', 'https://i.pravatar.cc/150?img=13');
+INSERT INTO patient (id, name, email, password, avatar) VALUES (101, 'João Silva', 'joao@email.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'https://i.pravatar.cc/150?img=11');
+INSERT INTO patient (id, name, email, password, avatar) VALUES (102, 'Maria Oliveira', 'maria@email.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'https://i.pravatar.cc/150?img=12');
+INSERT INTO patient (id, name, email, password, avatar) VALUES (103, 'Lucas Santos', 'lucas@email.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'https://i.pravatar.cc/150?img=13');
 
-INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (1, 'Dr. Roberto Almeida', 'roberto@clinic.com', '123456', 'Cardiologia', 'https://i.pravatar.cc/150?img=53');
-INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (2, 'Dra. Fernanda Costa', 'fernanda@clinic.com', '123456', 'Dermatologia', 'https://i.pravatar.cc/150?img=44');
-INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (3, 'Dr. Carlos Mendes', 'carlos@clinic.com', '123456', 'Ortopedia', 'https://i.pravatar.cc/150?img=33');
-INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (4, 'Dra. Juliana Silva', 'juliana@clinic.com', '123456', 'Pediatria', 'https://i.pravatar.cc/150?img=47');
-INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (5, 'Dr. Marcos Paulo', 'marcos@clinic.com', '123456', 'Neurologia', 'https://i.pravatar.cc/150?img=59');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (1, 'Dr. Roberto Almeida', 'roberto@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Cardiologia', 'https://i.pravatar.cc/150?img=53');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (2, 'Dra. Fernanda Costa', 'fernanda@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Dermatologia', 'https://i.pravatar.cc/150?img=44');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (3, 'Dr. Carlos Mendes', 'carlos@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Ortopedia', 'https://i.pravatar.cc/150?img=33');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (4, 'Dra. Juliana Silva', 'juliana@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Pediatria', 'https://i.pravatar.cc/150?img=47');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (5, 'Dr. Marcos Paulo', 'marcos@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Neurologia', 'https://i.pravatar.cc/150?img=59');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (6, 'Dra. Ana Luiza', 'ana@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Ginecologia', 'https://i.pravatar.cc/150?img=1');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (7, 'Dr. Pedro Henrique', 'pedro@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Oftalmologia', 'https://i.pravatar.cc/150?img=11');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (8, 'Dra. Camila Souza', 'camila@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Psiquiatria', 'https://i.pravatar.cc/150?img=5');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (9, 'Dr. Lucas Fernandes', 'lucas.med@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Urologia', 'https://i.pravatar.cc/150?img=8');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (10, 'Dra. Beatriz Lima', 'beatriz@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Endocrinologia', 'https://i.pravatar.cc/150?img=9');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (11, 'Dr. Gustavo Martins', 'gustavo@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Gastroenterologia', 'https://i.pravatar.cc/150?img=12');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (12, 'Dra. Amanda Rodrigues', 'amanda@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Otorrinolaringologia', 'https://i.pravatar.cc/150?img=16');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (13, 'Dr. Felipe Alves', 'felipe@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Pneumologia', 'https://i.pravatar.cc/150?img=14');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (14, 'Dra. Letícia Carvalho', 'leticia@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Infectologia', 'https://i.pravatar.cc/150?img=20');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (15, 'Dr. Thiago Ribeiro', 'thiago@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Reumatologia', 'https://i.pravatar.cc/150?img=15');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (16, 'Dra. Natália Gomes', 'natalia@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Nefrologia', 'https://i.pravatar.cc/150?img=21');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (17, 'Dr. Rafael Castro', 'rafael@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Oncologia', 'https://i.pravatar.cc/150?img=32');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (18, 'Dra. Carolina Mendes', 'carolina@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Hematologia', 'https://i.pravatar.cc/150?img=24');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (19, 'Dr. Rodrigo Barbosa', 'rodrigo@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Geriatria', 'https://i.pravatar.cc/150?img=33');
+INSERT INTO doctor (id, name, email, password, specialty, avatar) VALUES (20, 'Dra. Isabela Rocha', 'isabela@clinic.com', '$2a$10$A4F9HNr2Uqiq.kiYChgcEu87lf1lKCS4RLlqaDmgp0Xif67SkMsJO', 'Mastologia', 'https://i.pravatar.cc/150?img=25');
 
 INSERT INTO medical_report (id, name, details, patient_id, doctor_id, report_date) VALUES (1001, 'Eletrocardiograma', 'Ritmo sinusal normal. Sem alterações isquêmicas agudas.', 101, 1, '2023-10-15');
 INSERT INTO medical_report (id, name, details, patient_id, doctor_id, report_date) VALUES (1002, 'Exame Dermatológico', 'Presença de nevo atípico no dorso. Recomendada biópsia.', 102, 2, '2023-11-02');
@@ -18,6 +33,21 @@ INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lun
 INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (3, '1,3,5', '10:00', '20:00', false, '12:00', '13:00');
 INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (4, '2,4', '08:00', '12:00', false, '12:00', '13:00');
 INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (5, '', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (6, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (7, '2,4,6', '09:00', '15:00', false, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (8, '1,3,5', '13:00', '20:00', false, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (9, '1,2,3,4,5', '07:00', '16:00', true, '11:00', '12:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (10, '1,2,4,5', '10:00', '19:00', true, '14:00', '15:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (11, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (12, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (13, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (14, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (15, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (16, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (17, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (18, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (19, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
+INSERT INTO doctor_settings (doctor_id, work_days, start_time, end_time, has_lunch_break, lunch_start, lunch_end) VALUES (20, '1,2,3,4,5', '08:00', '18:00', true, '12:00', '13:00');
 
 INSERT INTO appointment (doctor_id, patient_id, appointment_date, appointment_time, status) VALUES (1, null, CURRENT_DATE + 1, '09:00', 'available');
 INSERT INTO appointment (doctor_id, patient_id, appointment_date, appointment_time, status) VALUES (1, 102, CURRENT_DATE + 1, '10:00', 'booked');
@@ -29,3 +59,8 @@ INSERT INTO appointment (doctor_id, patient_id, appointment_date, appointment_ti
 INSERT INTO appointment (doctor_id, patient_id, appointment_date, appointment_time, status) VALUES (2, 101, CURRENT_DATE + 1, '15:00', 'booked');
 INSERT INTO appointment (doctor_id, patient_id, appointment_date, appointment_time, status) VALUES (3, 101, CURRENT_DATE + 1, '10:00', 'booked');
 INSERT INTO appointment (doctor_id, patient_id, appointment_date, appointment_time, status) VALUES (3, null, CURRENT_DATE + 1, '11:00', 'available');
+
+ALTER TABLE doctor ALTER COLUMN id RESTART WITH 100;
+ALTER TABLE patient ALTER COLUMN id RESTART WITH 1000;
+ALTER TABLE appointment ALTER COLUMN id RESTART WITH 1000;
+ALTER TABLE medical_report ALTER COLUMN id RESTART WITH 2000;
